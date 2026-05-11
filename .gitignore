@@ -1,0 +1,19 @@
+# System
+.DS_Store
+Thumbs.db
+*.pem
+*.key
+
+# Dependencies
+node_modules/
+
+# Build
+dist/
+*.tsbuildinfo
+
+# Logs
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+bun-debug.log*
