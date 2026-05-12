@@ -1,21 +1,28 @@
 {
-  "name": "starter-ts",
-  "description": "📦️ Zero-config TypeScript template for rapid development. Pre-configured with modern tooling to start coding",
+  "name": "astro-crush",
+  "description": "📦️ The high-performance asset minification engine for Astro. Crush CSS, HTML, and JS to achieve peak loading speeds.",
   "author": "Luis Monsalve",
-  "version": "0.0.0",
-  "homepage": "https://github.com/TheElegantCoding/starter-ts#readme",
+  "version": "0.1.0",
+  "homepage": "https://github.com/TheElegantCoding/astro-crush#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TheElegantCoding/starter-ts.git"
+    "url": "git+https://github.com/TheElegantCoding/astro-crush.git"
   },
   "keywords": [
     "typescript",
     "github",
     "git",
-    "clean-code"
+    "clean-code",
+    "performance",
+    "minification",
+    "css",
+    "html",
+    "js",
+    "astro",
+    "web-development"
   ],
   "bugs": {
-    "url": "https://github.com/TheElegantCoding/starter-ts/issues"
+    "url": "https://github.com/TheElegantCoding/astro-crush/issues"
   },
   "type": "module",
   "exports": {
