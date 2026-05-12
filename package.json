@@ -2,7 +2,7 @@
   "name": "astro-crush",
   "description": "📦️ The high-performance asset minification engine for Astro. Crush CSS, HTML, and JS to achieve peak loading speeds.",
   "author": "Luis Monsalve",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "homepage": "https://github.com/TheElegantCoding/astro-crush#readme",
   "repository": {
     "type": "git",
@@ -44,7 +44,7 @@
     "build": "tsup",
     "typecheck": "tsc --noEmit",
     "lint": "eslint --fix",
-    "release": "bunx gitlys release"
+    "release": "bun run build && bunx gitlys release"
   },
   "dependencies": {
     "astro": "6.3.1",
