@@ -1,8 +1,8 @@
 <img src="./.github/asset/illustration/wave_header.svg" width="100%" />
 
 <h1 id="top" align="center">
-  <img src="./.github/asset/icon/typescript.svg" width="28px" align="center" />
-  Typescript Starter Template
+  <img src="./.github/asset/icon/astro.svg" width="28px" align="center" />
+  Astro Crush
 </h1>
 
 <br />
@@ -10,12 +10,12 @@
 <img src="./.github/asset/illustration/divider.svg" alt="divider" width="100%" />
 
 <pre align="center">
-  <a href="#installation">📦 SETUP</a> • <a href="#configuration">⚙️ CONFIGURATION</a> • <a href="#features">🛰️ FEATURES</a>
+  <a href="#installation">📦 SETUP</a> • <a href="#configuration">⚙️ CONFIGURATION</a>
 </pre>
 
 <img src="./.github/asset/illustration/divider.svg" alt="divider" width="100%" />
 
-<img src="./.github/asset/illustration/starter_ts_cover.svg" width="100%" />
+<img src="./.github/asset/illustration/astro_crush_cover.svg" width="100%" />
 
 <br />
 
@@ -24,6 +24,7 @@
   <img src="./.github/asset/illustration/bun_badge.svg" height="34px" />&nbsp;&nbsp;&nbsp;
   <img src="./.github/asset/illustration/github_badge.svg" height="34px" />&nbsp;&nbsp;&nbsp;
   <img src="./.github/asset/illustration/typescript_badge.svg" height="34px" />&nbsp;&nbsp;&nbsp;
+  <img src="./.github/asset/illustration/astro_badge.svg" height="34px" />&nbsp;&nbsp;&nbsp;
 </div>
 
 <img src="./.github/asset/illustration/divider.svg" alt="divider" width="100%" />
@@ -36,7 +37,7 @@
 <table border="0">
 <tr>
 <td>
-Zero-config TypeScript template for rapid development. Pre-configured with modern tooling to start coding
+Astro Crush is a specialized build-tool designed to aggressively optimize your Astro project's static output. It minifies CSS, HTML, and JS beyond standard defaults to ensure your site is as lightweight and fast as possible.
 </td>
 </tr>
 </table>
@@ -51,22 +52,12 @@ Zero-config TypeScript template for rapid development. Pre-configured with moder
 </h2>
 
 - [<img src="./.github/asset/icon/information.svg" width="20px" align="center" /> About](#about)
-- [<img src="./.github/asset/icon/satellite.svg" width="20px" align="center" /> Features](#features)
 - [<img src="./.github/asset/icon/thunder.svg" width="20px" align="center" /> Requirements](#requirements)
 - [<img src="./.github/asset/icon/package.svg" width="20px" align="center" /> Installation](#installation)
 - [<img src="./.github/asset/icon/rocket.svg" width="20px" align="center" /> Usage](#usage)
 - [<img src="./.github/asset/icon/gear.svg" width="20px" align="center" /> Configuration](#configuration)
 
 <br />
-
-<img src="./.github/asset/illustration/divider.svg" alt="divider" width="100%" />
-
-<h2 id="features">
-  <img src="./.github/asset/icon/satellite.svg" width="24px" align="center" />
-  Features
-</h2>
-
-[REPLACE with the features of your package]
 
 <img src="./.github/asset/illustration/divider.svg" alt="divider" width="100%" />
 
@@ -90,25 +81,25 @@ Zero-config TypeScript template for rapid development. Pre-configured with moder
 <h3><img src="./.github/asset/icon/bun.svg" width="24px" align="center" /> Bun</h3>
 
 ```bash
-bun i -D [REPLACE_WITH_PACKAGE_NAME]
+bun i -D astro-crush
 ```
 
 <h3><img src="./.github/asset/icon/npm.svg" width="24px" align="center" /> Npm</h3>
 
 ```bash
-npm i -D [REPLACE_WITH_PACKAGE_NAME]
+npm i -D astro-crush
 ```
 
 <h3><img src="./.github/asset/icon/pnpm.svg" width="24px" align="center" /> Pnpm</h3>
 
 ```bash
-pnpm i -D [REPLACE_WITH_PACKAGE_NAME]
+pnpm i -D astro-crush
 ```
 
 <h3><img src="./.github/asset/icon/yarn.svg" width="24px" align="center" /> Yarn</h3>
 
 ```bash
-yarn i -D [REPLACE_WITH_PACKAGE_NAME]
+yarn i -D astro-crush
 ```
 
 <br />
@@ -124,7 +115,18 @@ yarn i -D [REPLACE_WITH_PACKAGE_NAME]
   Usage
 </h2>
 
-[REPLACE with usage instructions]
+To use Astro Crush, simply add it to the astro config file:
+
+```js
+import { defineConfig } from 'astro/config';
+import astroCrush from 'astro-crush'; 
+
+export default defineConfig({
+  integrations: [astroCrush()]
+});
+```
+
+This will automatically minify your HTML, CSS, and JS files during the build process. For more advanced usage and configuration options, please refer to the [Configuration](#configuration) section below.
 
 <br />
 
@@ -139,7 +141,29 @@ yarn i -D [REPLACE_WITH_PACKAGE_NAME]
   Configuration
 </h2>
 
-[REPLACE with configuration instructions]
+you can customize the behavior of Astro Crush by passing options to the plugin function. Here are some of the available options:
+
+```ts
+import { defineConfig } from 'astro/config';
+import astroCrush from 'astro-crush'; 
+
+export default defineConfig({
+  integrations: [astroCrush({
+    disableCss: false, // Disable CSS minification
+    disableHtml: false, // Disable HTML minification
+    disableJavascript: false, // Disable JS minification
+    cssOptions: {
+      // CSS minification options (using lightningcss)
+    },
+    htmlOptions: {
+      // HTML minification options (using html-minifier-terser)
+    },
+    jsOptions: {
+      // JS minification options (using terser)
+    }
+  })]
+});
+```
 
 <br />
 
