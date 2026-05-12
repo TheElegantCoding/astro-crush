@@ -39,9 +39,21 @@
     "lint": "eslint --fix",
     "release": "bunx gitlys release"
   },
+  "dependencies": {
+    "astro": "6.3.1",
+    "fonteditor-core": "2.6.3",
+    "html-minifier-terser": "7.2.0",
+    "lightningcss": "1.32.0",
+    "logginlys": "4.0.2",
+    "node-html-parser": "7.1.0",
+    "sharp": "0.34.5",
+    "terser": "5.47.1"
+  },
   "devDependencies": {
-    "eslint-config-universal-code": "^1.0.14",
-    "gitlys": "^1.1.5",
+    "@types/html-minifier-terser": "7.0.2",
+    "@types/node": "25.6.2",
+    "eslint-config-universal-code": "^1.0.19",
+    "gitlys": "^2.1.4",
     "tsup": "^8.5.1",
     "typescript": "^5.9.3"
   }
